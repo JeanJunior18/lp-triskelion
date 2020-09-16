@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>TRISKELION</title>
 </head>
 <body>
@@ -12,16 +13,19 @@
             TRISKELION
         </div>
 
-        <ul class="sections">
+        <ul class="sections" id="sections">
             <li><a href="#">Home</a></li>
             <li><a href="#features">Funcionalidades</a></li>
             <li><a href="#">Demonstração</a></li>
             <li><a href="#">Depoimentos</a></li>
             <li><a href="#">Planos</a></li>
         </ul>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
     </nav>
-
-    <div class="container">
+ 
+    <main class="container">
 
         <section id="home" class="home-container">
             <div class="home-content">
@@ -29,11 +33,11 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat tempore iusto eius accusantium tempora assumenda, eum recusandae consectetur perspiciatis perferendis magnam quidem quasi quod incidunt officia veniam nemo repudiandae non?</p>
             </div>
 
-            <section class="demo">
+            <form class="demo">
                 <label for="demo">Solicitar Demonstração Gratuita</label>
                 <input placeholder="Email" type="email" name="email" type="email" inputmode="email">
                 <button type="submit">Teste Grátis</button>
-            </section>
+            </form>
             
             <a href="#features" class="button">Veja Mais</a>
         </section>
@@ -53,6 +57,30 @@
                 <img src="" alt="Suporte Personalizado">
                 <h3>Suporte Personalizado</h3>
             </article>
+        </section>
+
+        <section id="demo" class="demo-request">
+            <div class="demo-card">
+                <form action="#">
+                    <h4>Solicite a sua versão gratuita</h4>
+                    <input placeholder="Email" type="email" name="email" type="email" inputmode="email">
+                    <button type="submit">Teste Grátis</button>      
+                </form>
+                <div class="gallery">
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/dashboard-1739866-1481441.png" width="180" alt="Images">
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/dashboard-1739866-1481441.png" width="180" alt="Images">
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/dashboard-1739866-1481441.png" width="180" alt="Images">
+                    <img src="https://cdn.iconscout.com/icon/free/png-256/dashboard-1739866-1481441.png" width="180" alt="Images">
+                </div>
+            </div>
+        </section>
+
+        <section class="access-and-use-content">
+            <div class="img">
+                <img src="https://lh3.googleusercontent.com/proxy/rwuR-9-KFc_1N2UtyS-FsorNiXvxcw6a7OBH4VI-B7pN36sPmE_SWkB09NcOi4iwxhRQhlXKgDl-Yc4RzKo4AAdEHPyr2ZnRX4tN67r1s3g5xwSkfyB4X87u1JtaAnMYUrSVhWFCeJvMrqIKSfHy9QM" width="180" alt="Acesse e use">
+            </div>
+
+            <p>Simples de usar e intuitivo como tudo deve ser</p>
         </section>
 
         <section id="depositions" class="depositions-content">
@@ -83,10 +111,49 @@
         </section>
 
         <section id="plans" class="plans-content">
+            <div class="card-container">
+                <article class="card">
+                    <h4>Mensal</h4>
+                    <h2>R$ 80,00</h2>
 
+                    <img src="" alt="plano-1">
+                    <p>Descrição breve do plano</p>
+                </article>
+    
+                <article class="card">
+                    <h4>Semestral</h4>
+                    <h2>R$ 80,00</h2>
+
+                    <img src="" alt="plano-1">
+                    <p>Descrição breve do plano</p>
+                </article>
+                
+                <article class="card">
+                    <h4>Anual</h4>
+                    <h2>R$ 80,00</h2>
+
+                    <img src="" alt="plano-1">
+                    <p>Descrição breve do plano</p>
+                </article>
+            </div>
         </section>
 
-    </div>
-    </section>
+    </main>
+
+    <footer>
+        
+    </footer>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("sections");
+
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>

@@ -1,5 +1,11 @@
 /* CSS RESET */
 
+/* 
+    Breakpoints
+
+    900px
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -18,12 +24,14 @@ body {
     position: absolute;
     width: 100%;
     background-color: #f1f1f1;
-    outline: 1px solid;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 80px;
     padding: 0 20px;
+}
+.navbar .icon {
+    display: none;
 }
 
 .navbar .logo {
@@ -97,6 +105,45 @@ body {
     text-align: center;
 }
 
+/* Demo Request */
+.demo-request {
+    background-color: #d3d3d3;
+    height: 400px;
+}
+
+.demo-request .demo-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 30px;
+    max-width: 700px;
+    margin: auto;
+    height: 100%;
+}
+
+.demo-request .demo-card form {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.demo-request .demo-card .gallery {
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+/* Access And Use Container */
+.access-and-use-content {
+    background-color: #f3f3f3;
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 /* Depositions Container */
 
 .depositions-content {
@@ -119,8 +166,54 @@ body {
 
 /* Plans Container */
 
+.plans-content {
+    height: 400px;
+}
 
+.card-container {
+    /* outline: 1px solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 50px auto;
+}
 
+.plans-content .card {
+    flex: 1;
+    margin: 0 30px;
+    height: 300px;
+    border: 1px solid;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
 /* Footer */
 
 
+@media (max-width: 900px){
+    .navbar{
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .navbar .sections {
+        display: none;
+    }
+
+    .navbar .icon {
+        display: block;
+    }
+
+    .navbar .sections li {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+}
