@@ -58,11 +58,12 @@ body {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    padding: 0 250px;
+    /* padding: 0 250px; */
 }
 
 .home-content {
     /* outline: 1px solid; */
+    width: 50%;
     margin-top: 150px;
     text-align: center;
 }
@@ -216,4 +217,20 @@ body {
         font-size: 17px;
         display: block;
     }
+
+    .home-content {
+        /* outline: 1px solid; */
+        width: 80%;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .features-content {
+        padding: 10px;
+    }
 }
+
+@media (max-width: 500) {
+    
+}
+
