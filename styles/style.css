@@ -128,21 +128,42 @@ body {
 }
 
 .demo-request .demo-card .gallery {
-    flex: 3;
+    flex: 2;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: indigo; */
+}
+
+.demo-request .demo-card .gallery .gallery-item-a {
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+}
+.demo-request .demo-card .gallery .gallery-item-b {
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+}
+.demo-request .demo-card .gallery .gallery-item-a img {
+    width: 40%;
+}
+.demo-request .demo-card .gallery .gallery-item-b img {
+    width: 40%;
 }
 
 /* Access And Use Container */
 .access-and-use-content {
     background-color: #f3f3f3;
-    height: 300px;
+    max-height: 300px;
 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 
 /* Depositions Container */
