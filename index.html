@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>TRISKELION</title>
 </head>
 <body>
@@ -43,17 +44,17 @@
         </section>
 
         <section id="features" class="features-content">
-            <article class="card">
+            <article class="card" data-aos="fade-left">
                 <img src="" alt="Multiplataforma">
                 <h3>Multiplataforma</h3>
             </article>
 
-            <article class="card">
+            <article class="card" data-aos="zoom-in-down">
                 <img src="" alt="Backupd no Drive">
                 <h3>Backupd no Drive</h3>
             </article>
 
-            <article class="card">
+            <article class="card" data-aos="fade-right">
                 <img src="" alt="Suporte Personalizado">
                 <h3>Suporte Personalizado</h3>
             </article>
@@ -119,7 +120,7 @@
 
         <section id="plans" class="plans-content">
             <div class="card-container">
-                <article class="card">
+                <article data-aos="fade-right"  class="card">
                     <h4>Mensal</h4>
                     <h2>R$ 80,00</h2>
 
@@ -127,7 +128,7 @@
                     <p>Descrição breve do plano</p>
                 </article>
     
-                <article class="card">
+                <article data-aos="zoom-in" data-aos-delay="250" class="card">
                     <h4>Semestral</h4>
                     <h2>R$ 80,00</h2>
 
@@ -135,7 +136,7 @@
                     <p>Descrição breve do plano</p>
                 </article>
                 
-                <article class="card">
+                <article data-aos="fade-left" data-aos-delay="100" class="card">
                     <h4>Anual</h4>
                     <h2>R$ 80,00</h2>
 
@@ -151,16 +152,12 @@
         
     </footer>
 
-    <script>
-        function myFunction() {
-            var x = document.getElementById("sections");
+    <a id="whatsapp" href="https://api.whatsapp.com/send?phone=558999423648&text=Ol%C3%A1%2C%20eu%20gostaria%20de%20conhecer%20mais%20sobre%20a%20plataforma%20Triskelion" style="" target="_blank">
+    <i style="margin-top:16px" class="fa fa-whatsapp"></i>
+    </a>
 
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-            }
-        }
-    </script>
+    <script src="assets/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init()</script>
 </body>
 </html>
