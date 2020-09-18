@@ -41,7 +41,7 @@
 
 html{
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 body {
@@ -228,6 +228,8 @@ body {
 
 .plans-content {
     height: 400px;
+    /* overflow-x: hidden; */
+    animation: none;
 }
 
 .card-container {
@@ -237,6 +239,7 @@ body {
     align-items: center;
     max-width: 1000px;
     margin: 50px auto;
+    overflow-x: hidden;
 }
 
 .plans-content .card {
@@ -288,18 +291,8 @@ body {
     }
 
     #whatsapp {
-        position:fixed;
-        width:60px;
-        height:60px;
-        bottom:5px;
-        right:5px;
-        background-color:#25d366;
-        color:#FFF;
-        border-radius:50px;
-        text-align:center;
-        font-size:30px;
-        box-shadow: 1px 1px 2px #888;
-        z-index:1000;
+        bottom: 15px;
+        right: 15px;
     }
 }
 
