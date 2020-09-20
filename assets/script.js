@@ -1,10 +1,33 @@
 // Burguer NavBar
-function myFunction() {
-    var x = document.getElementById("sections");
+var screenSize = screen.width;
+var sections = document.querySelector("#menu-view");
 
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "block";
+window.addEventListener("resize", ()=>{
+    screenSize = screen.width
+    if(screenSize > 800)  sections.style.display === 'block'
+})
+
+    
+    function handleClickMenu() {
+        if(screenSize <= 800){
+            if (sections.style.display === "block") {
+                sections.style.transition = "0.2s linear";
+                sections.style.display = "none";
+            } else {
+                sections.style.transition = "0.2s linear";
+                sections.style.display = "block";
+            }
+        }   
     }
-}
+    
+    sections.addEventListener("click", ()=>{
+        if(screenSize <= 800){
+            if (sections.style.display === "block") {
+                sections.style.display = "none";
+            } else {
+                sections.style.display = "block";
+            }
+        }
+    })
+
+
