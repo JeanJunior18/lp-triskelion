@@ -226,12 +226,9 @@ html ::-webkit-scrollbar-thumb{
     display: flex;
     justify-content: center;
     align-items: center;
+    /* flex-direction: row-reverse; */
     padding: 2rem 0;
     gap: 3rem;
-}
-
-.row:first-child{
-    flex-direction: row-reverse;
 }
 
 .demo-content .row .image {
@@ -248,6 +245,7 @@ html ::-webkit-scrollbar-thumb{
 
 .demo-content .row .text form input{
     width: 100%;
+    max-width: 600px;
     display: block;
     border-radius: 20px;
     border: none;
@@ -259,16 +257,16 @@ html ::-webkit-scrollbar-thumb{
 }
 
 .demo-content .row .text form button{
-    width: 30%;
     margin-top: 1rem;
     border-radius: 40px;
     border: none;
-    padding: .9rem 1.6rem;
+    padding: .9rem 4rem;
     background-color: var(--color-primary);
     color: var(--color-font-button-one);
     font-weight: 600;
     font-size: 1.2rem;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);    
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 1rem auto;  
 }
 
 .demo-content .row .text p {
@@ -278,6 +276,10 @@ html ::-webkit-scrollbar-thumb{
 
 .demo-content .image img {
     width: 100%;
+}
+
+.depositions-container {
+    
 }
 
 /* Laptop */
@@ -365,6 +367,13 @@ html ::-webkit-scrollbar-thumb{
 
     .features-content {
         width: 100%;
+    }
+
+    .demo-content .row .text {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
