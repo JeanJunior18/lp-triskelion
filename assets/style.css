@@ -56,6 +56,14 @@ html{
     scroll-behavior: smooth;
 }
 
+html ::-webkit-scrollbar{
+    width: 10px;
+}
+html ::-webkit-scrollbar-thumb{
+    width: 10px;
+    background-color: var(--color-primary);
+}
+
 
 /* NAVBAR */
 
@@ -170,20 +178,39 @@ html{
 .features-content {
     min-height: 20rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 95%;
     margin: 0 auto;
+    /* border: 1px solid; */
 }
 
 .features-content .card {
     flex: 1;
+    /* height: 100%; */
+    padding: 2rem 0;
     text-align: center;
     color: var(--color-font-button-one);
     display: flex;
-    /* align-items: center; */
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-end;
     flex-direction: column;
+}
+
+.features-content .card .image {
+    height: 10rem;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+
+}
+
+.features-content .card h3 {
+    text-align: center;
+    justify-self: flex-end;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-top: 2rem;
 }
 
 /* Demo */
@@ -223,78 +250,6 @@ html{
 .demo-content .image img {
     width: 100%;
 }
-
-/* Access And Use Container */
-.access-and-use-content {
-    background-color: #f3f3f3;
-    max-height: 300px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-/* Depositions Container */
-
-.depositions-content {
-    display: flex;
-    overflow-x: auto;
-    overflow-y: initial;
-    max-width: 900px;
-    height: 300px;
-    margin: 0 auto;
-}
-
-.depositions-content::-webkit-scrollbar{
-    width: 10px;
-}
-.depositions-content::-webkit-scrollbar-thumb{
-    background-color: #d3d3d3;
-}
-
-.depositions-content .card {
-    flex: none;
-    width: 200px;
-    border: 1px solid;
-    border-radius: 10px;
-    margin: 0 20px;
-    padding: 30px;
-}
-
-/* Plans Container */
-
-.plans-content {
-    height: 400px;
-    /* overflow-x: hidden; */
-    animation: none;
-}
-
-.card-container {
-    /* outline: 1px solid; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1000px;
-    margin: 50px auto;
-    overflow-x: hidden;
-}
-
-.plans-content .card {
-    flex: 1;
-    margin: 0 30px;
-    height: 300px;
-    border: 1px solid;
-    border-radius: 20px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-}
-/* Footer */
 
 /* Laptop */
 @media (max-width: 1024px){
@@ -384,7 +339,7 @@ html{
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 600px) {
     
     .home-content .home-text {
         font-size: 1rem;
