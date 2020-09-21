@@ -69,7 +69,7 @@ html{
     z-index: 1;
     padding: 1rem 0;
 }
-.navbar .icon {
+.navbar .toggleIcon {
     display: none;
 }
 
@@ -318,37 +318,46 @@ html{
 @media (max-width: 800px) {
 
     .navbar {
-        overflow: hidden;
         background-color: var(--color-bg-one);
-        flex-direction: column;
+        min-height: 4rem;
     }
-    .navbar .icon {
+    .navbar .toggleIcon {
         display: block;
         position: absolute;
         right: 1.5rem;
+        top: 30%;
         transform: translate(50%, 50%);
     }
 
-    #menu-view {
-        display: none;
-    }
-
     .navbar .sections {
-        z-index: 1000;
+        max-height: 0;
+        overflow: hidden;
+        /* height: calc(100vh - 4rem); */
+        background-color: var(--color-bg-one);
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        width: 100%;
+        display: flex;
         flex-direction: column;
-        width: 100vw;
-        transition: 0.2 linear;
+        align-items: center;
+        transition: .3s;
+    }
+    .navbar .sections  li{
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+    .navbar .sections  li a {
+        flex: none;
+    }
+    .navbar .sections.open{
+        max-height: 100vh;
+        overflow: visible;
     }
     .navbar .logo {
         /* margin: 0; */
         align-self: flex-start;
-    }
-    .navbar .sections  li{
-        padding: 1rem 3rem;
-        text-decoration: none;
-        font-size: 17px;
-        display: block;
-        text-align: left;
     }
 
     .home-content {
