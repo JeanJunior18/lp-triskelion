@@ -30,4 +30,13 @@ window.addEventListener("resize", ()=>{
         }
     })
 
+function smoothScroll(target){
+    var targetOffsetTop = document.querySelector(target).offsetTop;
+    var heigthNav = document.querySelector("nav").offsetHeight;
+    var targetValue = targetOffsetTop - heigthNav;
 
+    console.log(targetValue)
+    window.scroll({
+        top: targetValue
+    })
+}
