@@ -241,6 +241,7 @@ html ::-webkit-scrollbar-thumb{
 }
 .demo-content .row .text h4 {
     font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .demo-content .row .text form input{
@@ -278,6 +279,7 @@ html ::-webkit-scrollbar-thumb{
     width: 100%;
 }
 
+/* Depoimentos */
 .depositions-container {
     background-color: var(--color-bg-three);
 }
@@ -300,6 +302,56 @@ html ::-webkit-scrollbar-thumb{
 
 .depositions-content .deposition img {
     width: 100%;
+}
+
+/* Planos */
+
+.plans-content {
+    padding: 4rem 0;
+}
+
+.plans-content h1 {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-weight: 800;
+    font-size: 4rem;
+}
+
+.plans-content .plans {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    text-align: center;
+    line-height: 3rem;
+}
+
+.plans-content .plans h3 {
+    font-weight: 800;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.plans-content .plans .plan .card {
+    height: 30rem;
+    padding: 2rem;
+    border-radius: 25px;
+    background-color: var(--color-bg-three);
+    font-weight: 400;
+    font-size: 1.3rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.plans-content .plans .plan .card h4 {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.plans-content .plans > :nth-last-child(1) .card{
+    color: var(--color-bg-two);
+    background-color: var(--color-primary);
 }
 
 /* Laptop */
