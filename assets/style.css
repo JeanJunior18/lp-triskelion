@@ -354,6 +354,26 @@ html ::-webkit-scrollbar-thumb{
     background-color: var(--color-primary);
 }
 
+.partners-content {
+    background-color: var(--color-primary);
+    padding: 2rem;
+}
+
+.partners-content h1 {
+    margin-bottom: 2rem;
+    font-weight: 800;
+    font-size: 4rem;
+    color: var(--color-bg-three);
+    text-align: center;
+}
+
+.partners-content .partners {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
 /* Laptop */
 @media (max-width: 1024px){
     body,
@@ -446,6 +466,10 @@ html ::-webkit-scrollbar-thumb{
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+
+    .partners-content h1 {
+        font-size: 2rem;
     }
 }
 
