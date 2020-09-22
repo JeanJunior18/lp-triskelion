@@ -16,11 +16,10 @@
         </div>
         
         <ul class="sections" id="sections">
-            <li><a onclick="smoothScroll('#home')">Home</a></li>
             <li><a onclick="smoothScroll('#features')">Funcionalidades</a></li>
             <li><a onclick="smoothScroll('#demo')">Demonstração</a></li>
-            <li><a onclick="smoothScroll('#')">Depoimentos</a></li>
-            <li><a onclick="smoothScroll('#')">Planos</a></li>
+            <li><a onclick="smoothScroll('#depositions')">Depoimentos</a></li>
+            <li><a onclick="smoothScroll('#plans')">Planos</a></li>
         </ul>
 
         <a href="javascript:void(0);" class="toggleIcon" onclick="handleClickMenu(this)">
@@ -96,7 +95,7 @@
             </section>
         </div>
 
-        <div class="depositions-container">
+        <div id="depositions" class="depositions-container">
             <h1>Depoimentos</h1>
 
             <section class="depositions-content">    
@@ -115,11 +114,11 @@
             </section>
         </div>
 
-        <section class="plans-content">
+        <section id="plans" class="plans-content">
             <h1>Planos</h1>
 
             <div class="plans">
-                <article class="plan">
+                <article class="plan" data-aos="fade-up" data-aos-delay="200">
                     <h3>BÁSICO</h3>
 
                     <ul class="card">
@@ -131,7 +130,7 @@
                     </ul>
                 </article>
 
-                <article class="plan">
+                <article class="plan" data-aos="fade-up" data-aos-delay="400">
                     <h3>AVANÇADO</h3>
 
                     <ul class="card">
@@ -143,7 +142,7 @@
                     </ul>
                 </article>
 
-                <article class="plan">
+                <article class="plan" data-aos="fade-up" data-aos-delay="600">
                     <h3>PRO</h3>
 
                     <ul class="card">
@@ -162,16 +161,16 @@
 
             <div class="partners">
                 <div class="partner">
-                    <img src="assets/images/parc01.png" alt="Cashew">
+                    <img src="assets/images/parc01.png" alt="Cashew" data-aos="zoom-out" data-aos-delay="200">
                 </div>
                 <div class="partner">
-                    <img src="assets/images/parc02.png" alt="Zé Adelino">
+                    <img src="assets/images/parc02.png" alt="Zé Adelino" data-aos="zoom-out" data-aos-delay="100">
                 </div>
                 <div class="partner">
-                    <img src="assets/images/parc03.png" alt="Amo Mar">
+                    <img src="assets/images/parc03.png" alt="Amo Mar" data-aos="zoom-out" data-aos-delay="400">
                 </div>
                 <div class="partner">
-                    <img src="assets/images/parc04.png" alt="Mundo PET">
+                    <img src="assets/images/parc04.png" alt="Mundo PET" data-aos="zoom-out" data-aos-delay="300">
                 </div>
             </div>
         </section>
@@ -184,16 +183,16 @@
         </div>
 
         <div class="social">
-            <div class="media">
+            <div class="media" data-aos="zoom-in" data-aos-delay="100">
                 <img src="assets/images/FACEBOOK.png" alt="Facebook">
             </div>
-            <div class="media">
+            <div class="media" data-aos="zoom-in" data-aos-delay="200">
                 <img src="assets/images/LINKEDIN.png" alt="LinkedIn">
             </div>
-            <div class="media">
+            <div class="media" data-aos="zoom-in" data-aos-delay="300">
                 <img src="assets/images/YOUTUBE.png" alt="YouTube">
             </div>
-            <div class="media">
+            <div class="media" data-aos="zoom-in" data-aos-delay="400">
                 <img src="assets/images/INSTAGRAM.png" alt="Instagram">
             </div>
         </div>
