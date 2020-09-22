@@ -279,7 +279,27 @@ html ::-webkit-scrollbar-thumb{
 }
 
 .depositions-container {
-    
+    background-color: var(--color-bg-three);
+}
+.depositions-container h1{
+    color: var(--color-font-button-two);
+    font-weight: bold;
+    font-size: 4rem;
+    text-align: center;
+    padding: 3rem;
+}
+
+.depositions-content {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-bottom: 5rem;
+    overflow-x: hidden;
+}
+
+.depositions-content .deposition img {
+    width: 100%;
 }
 
 /* Laptop */
@@ -392,6 +412,10 @@ html ::-webkit-scrollbar-thumb{
 
     .demo-content .row {
         flex-direction: column;
+    }
+
+    .depositions-container h1 {
+        font-size: 2rem;
     }
 }
 
