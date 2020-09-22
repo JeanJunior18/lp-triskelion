@@ -374,6 +374,38 @@ html ::-webkit-scrollbar-thumb{
     gap: 1rem;
 }
 
+
+footer {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+foooter .logo-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .social .media {
+    padding: 1rem;
+}
+
+footer span {
+    color: var(--color-font-button-two);
+    font-weight: 400;
+    font-size: .8rem;
+}
+
+
 /* Laptop */
 @media (max-width: 1024px){
     body,
