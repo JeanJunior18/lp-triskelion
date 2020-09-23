@@ -85,6 +85,7 @@ html ::-webkit-scrollbar-thumb{
 .navbar .logo {
     width: 15rem;
     margin-left: calc(100vw / 20);
+    cursor: pointer;
 }
 .navbar .logo img {
     width: 100%;
