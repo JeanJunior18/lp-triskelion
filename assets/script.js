@@ -26,3 +26,19 @@ function smoothScroll(target){
         top: targetValue
     })
 }
+
+function removeEffectts(){
+    var widthWindow = document.documentElement.clientWidth;
+    if(widthWindow <= 600){
+        var articles = document.querySelectorAll("article");
+        var section = document.querySelectorAll("section");
+        var div = document.querySelectorAll("div");
+
+        articles.forEach(element => element.removeAttribute("data-aos"));
+        section.forEach(element => element.removeAttribute("data-aos"));
+        div.forEach(element => element.removeAttribute("data-aos"));
+    }
+}
+removeEffectts();
+
+window.addEventListener('resize', removeEffectts)
