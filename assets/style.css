@@ -37,6 +37,8 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
+
+    scroll-behavior: smooth;
 }
 
 body,
@@ -46,21 +48,23 @@ input {
     color: var(--color-primary);
 }
 
-html{
-    --color-bg-one: #f5f5f5;
-    --color-bg-two: #fff;
-    --color-bg-three: #E1E1E6;
+:root{
     --color-primary: #321666;
     --color-secondary: #18A0FB;
+    --color-bg-a: #fff;
+    --color-bg-b: #E1E1E6;
+    --color-bg-one: #f5f5f5;
     --color-font-button-one: #fff;
     --color-font-button-two: #000;
-    scroll-behavior: smooth;
+
+    --content-fit: 80%;
+    --header-font-size: 3rem;
 }
 
-html ::-webkit-scrollbar{
+::-webkit-scrollbar{
     width: 10px;
 }
-html ::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb{
     width: 10px;
     background-color: var(--color-primary);
 }
@@ -71,7 +75,7 @@ html ::-webkit-scrollbar-thumb{
 .navbar {
     position: fixed;
     width: 100%;
-    background-color: var(--color-bg-two);
+    background-color: var(--color-bg-a);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -171,30 +175,29 @@ html ::-webkit-scrollbar-thumb{
     cursor: pointer;
 }
 .home-container .home-text .button:hover {
-    background-color: var(--color-bg-three);
+    background-color: var(--color-bg-b);
     color: var(--color-primary);
 }
 
 
 /* Features Container */
 
-.features-container {
+.spotlight {
     background-color: var(--color-primary);
     overflow-x: hidden;
 }
 
-.features-content {
+.spotlight-content {
     min-height: 20rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 95%;
+    width: var(--content-fit);
     margin: 0 auto;
 }
 
-.features-content .card {
+.spotlight-content .card {
     flex: 1;
-    /* height: 100%; */
     padding: 2rem 0;
     text-align: center;
     color: var(--color-font-button-one);
@@ -204,7 +207,7 @@ html ::-webkit-scrollbar-thumb{
     flex-direction: column;
 }
 
-.features-content .card .image {
+.spotlight-content .card .image {
     height: 10rem;
     margin: 0 auto;
     display: grid;
@@ -212,7 +215,7 @@ html ::-webkit-scrollbar-thumb{
 
 }
 
-.features-content .card h3 {
+.spotlight-content .card h3 {
     text-align: center;
     justify-self: flex-end;
     font-weight: 400;
@@ -222,48 +225,53 @@ html ::-webkit-scrollbar-thumb{
 }
 
 /* Demo */
-.demo-content {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    margin: 2rem auto;
+.row-a {
+    overflow: hidden;
+    background-color: var(--color-bg-a);
+    padding: 2rem 0;
 }
 
-.demo-content .row {
+.demo-form {
+    display: flex;
+    flex-direction: column;
+    width: var(--content-fit);
+    margin: 0 auto;
+}
+
+.demo-form .row {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0;
     gap: 3rem;
 }
 
-.demo-content .row .image {
+.demo-form .row .image {
     flex: 1;
 }
 
-.demo-content .row .text {
+.demo-form .row .text {
     flex: 1;
     color: var(--color-font-button-two);
 }
-.demo-content .row .text h4 {
+.demo-form .row .text h4 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
 }
 
-.demo-content .row .text form input{
+.demo-form .row .text form input{
     width: 100%;
     max-width: 600px;
     display: block;
     border-radius: 20px;
     border: none;
     padding: .8rem 1rem;
-    background-color: var(--color-bg-three);
+    background-color: var(--color-bg-b);
     font-size: 1rem;
     font-weight: 300;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.demo-content .row .text form button{
+.demo-form .row .text form button{
     margin-top: 1rem;
     border-radius: 40px;
     border: none;
@@ -278,76 +286,78 @@ html ::-webkit-scrollbar-thumb{
     cursor: pointer;
 }
 
-.demo-content .row .text form button:hover{
-    background-color: var(--color-bg-three);
+.demo-form .row .text form button:hover{
+    background-color: var(--color-bg-b);
     color: var(--color-primary);
 }
 
-.demo-content .image img {
+.demo-form .image img {
     width: 100%;
 }
 
 /* Depoimentos */
-.depositions-container {
-    background-color: var(--color-bg-three);
+.row-b {
+    background-color: var(--color-bg-b);
 }
-.depositions-container h1{
+.row-b h1{
     color: var(--color-font-button-two);
     font-weight: bold;
-    font-size: 4rem;
+    font-size: var(--header-font-size);
     text-align: center;
     padding: 3rem;
     text-transform: uppercase;
 }
 
-.depositions-content {
+.depositions {
     display: flex;
     justify-content: space-evenly;
     gap: 1rem;
     flex-wrap: wrap;
     padding-bottom: 5rem;
     overflow-x: hidden;
+    width: var(--content-fit);
+    margin: 0 auto;
 }
 
-.depositions-content .deposition img {
+.depositions .deposition img {
     width: 100%;
 }
 
 /* Planos */
 
-.plans-content {
-    padding: 4rem 0;
-}
-
-.plans-content h1 {
+.row-a h1 {
     text-align: center;
     margin-bottom: 1rem;
     font-weight: 800;
-    font-size: 4rem;
+    font-size: var(--header-font-size);
     text-transform: uppercase;
 }
 
-.plans-content .plans {
+.row-a .plans {
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 1rem;
     text-align: center;
+
+    width: var(--content-fit);
+    margin: 0 auto;
+
     line-height: 3rem;
 }
 
-.plans-content .plans h3 {
+.row-a .plans h3 {
     font-weight: 800;
     font-size: 2rem;
     text-transform: uppercase;
 }
 
-.plans-content .plans .card {
+.row-a .plans .card {
     min-height: 30rem;
     padding: 2rem;
     border-radius: 25px;
-    background-color: var(--color-bg-three);
+    background-color: var(--color-bg-b);
     font-weight: 400;
     font-size: 1.3rem;
     margin: 0 auto;
@@ -358,13 +368,13 @@ html ::-webkit-scrollbar-thumb{
     flex-direction: column;
 }
 
-.plans-content .plans .card button{
+.row-a .plans .card button{
     font-weight: 800;
     font-size: 1.5rem;
     border-radius: 25px;
     border: none;
     background-color: var(--color-primary);
-    color: var(--color-bg-three);
+    color: var(--color-bg-b);
     padding: .5rem 1.4rem;
     text-transform: uppercase;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -372,29 +382,29 @@ html ::-webkit-scrollbar-thumb{
     transition: 0.2s;
 }
 
-.plans-content .plans .card button:hover{
-    background-color: var(--color-bg-three);
+.row-a .plans .card button:hover{
+    background-color: var(--color-bg-b);
     color: var(--color-primary);
 }
 
-.plans-content .plans .card h4 {
+.row-a .plans .card h4 {
     font-weight: 700;
     font-size: 1.5rem;
 }
 
-.plans-content .plans > :nth-last-child(1) {
-    color: var(--color-bg-two);
+.row-a .plans > :nth-last-child(1) {
+    color: var(--color-bg-a);
     background-color: var(--color-primary);
 }
 
-.plans-content .plans > :nth-last-child(1) button {
-    background-color: var(--color-bg-three);
+.row-a .plans > :nth-last-child(1) button {
+    background-color: var(--color-bg-b);
     color: var(--color-primary);
     padding: 1rem 1.4rem;
 }
 
-.plans-content .plans > :nth-last-child(1) button:hover {
-    color: var(--color-bg-three);
+.row-a .plans > :nth-last-child(1) button:hover {
+    color: var(--color-bg-b);
     background-color: var(--color-primary);
 }
 
@@ -407,8 +417,8 @@ html ::-webkit-scrollbar-thumb{
 .partners-content h1 {
     margin-bottom: 2rem;
     font-weight: 800;
-    font-size: 4rem;
-    color: var(--color-bg-three);
+    font-size: var(--header-font-size);
+    color: var(--color-bg-b);
     text-align: center;
 }
 
@@ -483,6 +493,9 @@ footer :nth-child(n){
 
 /* Mobile*/
 @media (max-width: 800px) {
+    :root{
+        --content-fit: 92%;
+    }
 
     .navbar {
         background-color: var(--color-bg-one);
@@ -546,11 +559,8 @@ footer :nth-child(n){
         display: none;
     }
 
-    .features-content {
-        width: 100%;
-    }
 
-    .demo-content .row .text {
+    .demo-form .row .text {
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -583,17 +593,17 @@ footer :nth-child(n){
         width: 100%;
     }
 
-    .features-content {
+    .spotlight-content {
         align-items: center;
         justify-content: center;
         flex-direction: column;
     }
 
-    .demo-content .row {
+    .demo-form .row {
         flex-direction: column;
     }
 
-    .depositions-container h1 {
+    .row-b h1 {
         font-size: 1.4rem;
     }
 }
