@@ -41,13 +41,6 @@
     scroll-behavior: smooth;
 }
 
-body,
-a,
-input {
-    font: 700 1rem 'Montserrat', sans-serif;
-    color: var(--color-primary);
-}
-
 :root{
     --color-primary: #321666;
     --color-secondary: #18A0FB;
@@ -61,6 +54,13 @@ input {
     --header-font-size: 3rem;
 }
 
+body,
+a,
+input {
+    font: 700 1rem 'Montserrat', sans-serif;
+    color: var(--color-primary);
+}
+
 ::-webkit-scrollbar{
     width: 10px;
 }
@@ -71,7 +71,6 @@ input {
 
 
 /* NAVBAR */
-
 .navbar {
     position: fixed;
     width: 100%;
@@ -108,7 +107,7 @@ input {
     cursor: pointer;
 }
 
-/* Home Container */
+/* Home Section */
 
 .home-container {
     width: 100%;
@@ -124,7 +123,7 @@ input {
 }
 
 .home-content {
-    width: 90%;
+    width: var(--content-fit);
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
@@ -134,12 +133,11 @@ input {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    gap: 2rem;
 }
 
 .home-content .home-text {
     flex: 1;
-    margin-right: 50px;
-    width: 50%;
     text-align: justify;
     animation: fadeIn 0.2s linear;
     font-size: 1.3rem;
@@ -180,7 +178,7 @@ input {
 }
 
 
-/* Features Container */
+/* Main Rows Setup */
 
 .spotlight {
     background-color: var(--color-primary);
@@ -188,11 +186,15 @@ input {
 }
 
 .spotlight-content {
+    width: var(--content-fit);
     min-height: 20rem;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: var(--content-fit);
+    flex-wrap: wrap;
+    gap: 2rem;
+    
     margin: 0 auto;
 }
 
@@ -224,13 +226,33 @@ input {
     text-transform: uppercase;
 }
 
-/* Demo */
 .row-a {
     overflow: hidden;
     background-color: var(--color-bg-a);
     padding: 2rem 0;
 }
 
+.row-a h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    font-size: var(--header-font-size);
+    text-transform: uppercase;
+}
+
+.row-b {
+    background-color: var(--color-bg-b);
+}
+.row-b h1{
+    color: var(--color-font-button-two);
+    font-weight: bold;
+    font-size: var(--header-font-size);
+    text-align: center;
+    padding: 3rem;
+    text-transform: uppercase;
+}
+
+/* Demo Section*/
 .demo-form {
     display: flex;
     flex-direction: column;
@@ -295,19 +317,7 @@ input {
     width: 100%;
 }
 
-/* Depoimentos */
-.row-b {
-    background-color: var(--color-bg-b);
-}
-.row-b h1{
-    color: var(--color-font-button-two);
-    font-weight: bold;
-    font-size: var(--header-font-size);
-    text-align: center;
-    padding: 3rem;
-    text-transform: uppercase;
-}
-
+/* Desposition Section */
 .depositions {
     display: flex;
     justify-content: space-evenly;
@@ -323,17 +333,8 @@ input {
     width: 100%;
 }
 
-/* Planos */
-
-.row-a h1 {
-    text-align: center;
-    margin-bottom: 1rem;
-    font-weight: 800;
-    font-size: var(--header-font-size);
-    text-transform: uppercase;
-}
-
-.row-a .plans {
+/* Plans Section */
+.plans {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -347,13 +348,13 @@ input {
     line-height: 3rem;
 }
 
-.row-a .plans h3 {
+.plans h3 {
     font-weight: 800;
     font-size: 2rem;
     text-transform: uppercase;
 }
 
-.row-a .plans .card {
+.plans .card {
     min-height: 30rem;
     padding: 2rem;
     border-radius: 25px;
@@ -368,7 +369,7 @@ input {
     flex-direction: column;
 }
 
-.row-a .plans .card button{
+.plans .card button{
     font-weight: 800;
     font-size: 1.5rem;
     border-radius: 25px;
@@ -382,33 +383,33 @@ input {
     transition: 0.2s;
 }
 
-.row-a .plans .card button:hover{
+.plans .card button:hover{
     background-color: var(--color-bg-b);
     color: var(--color-primary);
 }
 
-.row-a .plans .card h4 {
+.plans .card h4 {
     font-weight: 700;
     font-size: 1.5rem;
 }
 
-.row-a .plans > :nth-last-child(1) {
+.plans > :nth-last-child(1) {
     color: var(--color-bg-a);
     background-color: var(--color-primary);
 }
 
-.row-a .plans > :nth-last-child(1) button {
+.plans > :nth-last-child(1) button {
     background-color: var(--color-bg-b);
     color: var(--color-primary);
     padding: 1rem 1.4rem;
 }
 
-.row-a .plans > :nth-last-child(1) button:hover {
+.plans > :nth-last-child(1) button:hover {
     color: var(--color-bg-b);
     background-color: var(--color-primary);
 }
 
-/* Parcerias */
+/* Partner Section */
 .partners-content {
     background-color: var(--color-primary);
     padding: 2rem;
@@ -433,6 +434,7 @@ input {
     width: 100%;
 }
 
+/* Footer Section */
 footer {
     display: flex;
     justify-content: space-between;
@@ -475,12 +477,6 @@ footer :nth-child(n){
 
 /* Laptop */
 @media (max-width: 1024px){
-    body,
-    a,
-    input {
-        font-size: 0.9rem;
-    }
-
     .navbar .logo {
         width: 10rem;
         margin-left: calc(100% / 20);
@@ -491,12 +487,14 @@ footer :nth-child(n){
     }
 }
 
-/* Mobile*/
+/* Mobile L*/
 @media (max-width: 800px) {
     :root{
         --content-fit: 92%;
+        --header-font-size: 2.3rem;
     }
 
+    /* Narbar Mobile */
     .navbar {
         background-color: var(--color-bg-one);
         min-height: 4rem;
@@ -512,7 +510,6 @@ footer :nth-child(n){
     .navbar .sections {
         max-height: 0;
         overflow: hidden;
-        /* height: calc(100vh - 4rem); */
         background-color: var(--color-bg-one);
         position: absolute;
         top: 4rem;
@@ -536,21 +533,10 @@ footer :nth-child(n){
         overflow: visible;
     }
     .navbar .logo {
-        /* margin: 0; */
         align-self: flex-start;
     }
 
-    .home-content {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .home-content .home-text {
-        width: 85%;
-        margin: 0 auto;
-    }
-
+    /* Mobile Changes */
     .home-content .home-text :nth-child(1){
         text-align: center;
     }
@@ -559,20 +545,8 @@ footer :nth-child(n){
         display: none;
     }
 
-
     .demo-form .row .text {
         text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .plans-content h1 {
-        font-size: 2rem;
-    }
-
-    .partners-content h1 {
-        font-size: 2rem;
     }
 
     #whatsapp {
@@ -586,42 +560,17 @@ footer :nth-child(n){
     }
 }
 
-@media (max-width: 600px) {
-    
-    .home-content .home-text {
-        font-size: 1rem;
-        width: 100%;
-    }
-
-    .spotlight-content {
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
+/* Mobile M */
+@media (max-width: 600px) { 
     .demo-form .row {
         flex-direction: column;
     }
-
-    .row-b h1 {
-        font-size: 1.4rem;
-    }
 }
 
+/* Mobile S */
 @media (max-width: 370px) {
-    .home-content .home-text {
-        font-size: 0.75rem;
-    }
-    
-    .plans {
-        width: 90%;
-        margin: auto;
-    }
-    .plans-content .plans .card {
-        font-size: 1rem;
-    }
-    .plans-content .plans .card h3{
-        font-size: 1.6rem;
+    :root {
+        --header-font-size: 1.8rem;
     }
 }
 
