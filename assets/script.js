@@ -1,3 +1,4 @@
+// Menu Mobile
 function handleClickMenu(){
     var list = document.querySelector(".sections");
     var listItem = document.querySelectorAll(".sections li");
@@ -17,6 +18,7 @@ function handleClickMenu(){
     }
 }
 
+// Somooth Scroll
 function smoothScroll(target){
     var targetOffsetTop = document.querySelector(target).offsetTop;
     var heigthNav = document.querySelector("nav").offsetHeight;
@@ -27,6 +29,7 @@ function smoothScroll(target){
     })
 }
 
+// Rmeove AOS  efects
 function removeEffectts(){
     var widthWindow = document.documentElement.clientWidth;
     if(widthWindow <= 600){
