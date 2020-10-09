@@ -67,6 +67,7 @@ input {
 .navbar {
     position: fixed;
     width: 100%;
+    height: 5rem;
     background-color: var(--color-bg-a);
     display: flex;
     justify-content: space-between;
@@ -79,7 +80,7 @@ input {
 }
 
 .navbar .logo {
-    width: 15rem;
+    width: 10rem;
     margin-left: calc(100vw / 20);
     cursor: pointer;
 }
@@ -103,49 +104,46 @@ input {
 
 /* Home Section */
 .home-container {
+    padding-top: 5rem;
     width: 100%;
+    min-height: 100vh;
     background-image: url("images/background1.png");
-    height: 100vh;
-    position: relative;
 }
 
 .background-opacity {
     background-color: rgba(225, 225, 230, 0.9);
-    height: 100%;
+    height: 100vh;
     width: 100%;
 }
 
 .home-content {
     width: var(--content-fit);
+    height: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    flex-direction: row;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    flex-wrap: wrap;
     gap: 2rem;
 }
 
 .home-content .home-text {
-    flex: 1;
+    flex: 0 1 540px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
     text-align: justify;
     animation: fadeIn 0.2s linear;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font: 600;
     color: var(--color-primary);
-    position: relative;
-}
-
-.home-content .home-text :nth-child(n){
-    margin: 25px 0;
 }
 
 .home-content .home-image {
-    flex: 1;
-    width: auto;
+    flex: .8 0 140px;
 }
 .home-content .home-image img {
     width: 100%;
@@ -159,11 +157,10 @@ input {
     background-color: var(--color-primary);
     transition: 0.2s;
     animation: fadeIn 0.2s linear;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%,-50%);
     text-align: center;
     cursor: pointer;
+
+    align-self: center;
 }
 .home-container .home-text .button:hover {
     background-color: var(--color-bg-b);
@@ -491,18 +488,6 @@ footer :nth-child(n){
     max-width: 100%;
 }
 
-/* Laptop */
-@media (max-width: 1024px){
-    .navbar .logo {
-        width: 10rem;
-        margin-left: calc(100% / 20);
-    }
-
-    .home-content .home-text {
-        font-size: 0.95rem;
-    }
-}
-
 /* Mobile L*/
 @media (max-width: 800px) {
     :root{
@@ -556,10 +541,15 @@ footer :nth-child(n){
     .home-content .home-text :nth-child(1){
         text-align: center;
     }
-
-    .home-content .home-image {
-        display: none;
+    .home-content {
+        flex-direction: column;
+        flex-wrap: nowrap;
     }
+    .home-content .home-image {
+        width: 50%;
+        flex: 0 0 150px;
+    }
+
 
     .demo-form .row .text {
         text-align: center;
@@ -581,12 +571,16 @@ footer :nth-child(n){
     .demo-form .row {
         flex-direction: column;
     }
+    
 }
 
 /* Mobile S */
 @media (max-width: 370px) {
     :root {
         --header-font-size: 1.8rem;
+    }
+    .home-content .home-image {
+        display: none;
     }
 }
 
